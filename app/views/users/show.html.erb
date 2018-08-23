@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Trainer:</strong>
+  <%= @user.trainer.name %>
+</p>
+
+<p>
+  <strong>Gym Classes:</strong>
+  <% @user.gym_classes.each do |gym_class| %>
+  <%= gym_class.name.split(' ').join(', ') %>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
