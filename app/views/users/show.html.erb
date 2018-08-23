@@ -13,7 +13,7 @@
 <p>
   <strong>Gym Classes:</strong>
   <% @user.gym_classes.each do |gym_class| %>
-  <%= gym_class.name.split(' ').join(', ') %>
+  <%= gym_class.name %> |
   <% end %>
 </p>
 
